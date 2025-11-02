@@ -1,0 +1,36 @@
+{
+  "name": "mern-testing-app",
+  "version": "1.0.0",
+  "description": "MERN Stack Testing and Debugging Application",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install && cd ..",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "cd client && npm start",
+    "server": "cd server && npm run dev",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest --testPathPattern=unit",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:e2e": "cypress open",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "MERN",
+    "Testing",
+    "Jest",
+    "React Testing Library"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "concurrently": "^7.6.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "mongodb-memory-server": "^8.12.0",
+    "supertest": "^6.3.3"
+  }
+}
